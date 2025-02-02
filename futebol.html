@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol - Ribas Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Ribas Interativo</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Página Inicial</a></li>
+                <li><a href="futebol.html" class="active">Futebol</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="patrocinio.html">Colaboradores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="futebol" class="section">
+            <div class="container">
+                <h2>Notícias de Futebol</h2>
+
+                <!-- Notícia sobre a Final do Campeonato Municipal -->
+                <div class="noticia-card">
+                    <h3>Final do Campeonato Municipal Manoel Messias - Novo Triunfo-BA</h3>
+                    <img src="cam_NT/NT1.jpg" alt="Final do Campeonato Municipal - Novo Triunfo" class="noticia-capa" width="100%">
+                    
+                    <!-- Texto resumido da notícia -->
+                    <p id="resumoNoticia">
+                        No dia 19/01 ocorreu a grande final do Campeonato Municipal Manoel Messias, realizado na cidade de Novo Triunfo-BA, com total apoio da Prefeitura Municipal, atualmente sob o mandato do prefeito Matheus Bob. A final chamou atenção pela sua rivalidade, onde as equipes Panelinha F.C e Fofa F.C atraíram vários espectadores da região...
+                    </p>
+
+                    <!-- Botão "Ver Mais" -->
+                    <button class="btn" onclick="mostrarMais()">Ver mais</button>
+                    
+                    <!-- Texto completo da notícia -->
+                    <div id="textoCompleto" style="display: none;">
+                        <p>No dia 19/01 ocorreu a grande final do Campeonato Municipal Manoel Messias, realizado na cidade de Novo Triunfo-BA, com total apoio da Prefeitura Municipal, atualmente sob o mandato do prefeito Matheus Bob.</p>
+                        <p>A final chamou atenção pela sua rivalidade, onde as equipes Panelinha F.C e Fofa F.C atraíram vários espectadores da região.</p>
+                        <p>Logo no início do jogo, o atacante Cristiano Albuquerque, vulgo Yeyé, abriu o placar com um chute no canto direito do goleiro Yuri, colocando a Panelinha na frente por 1x0. Mas não demorou muito para que em um escanteio preciso, o zagueiro Marcão empatasse o jogo de cabeça.</p>
+                        <p>Mas, como diz o velho ditado, a estrela estava brilhando para um atleta específico. Samuel Shushi, em um contra-ataque fulminante, colocou a Panelinha novamente à frente, esbanjando velocidade. E não parou por aí! Em mais um contra-ataque, a bola sobrou no meio da lua e Samuel Shushi fez um gol de placa, consagrando a Panelinha F.C como campeã municipal de 2025.</p>
+                        <p>Com o placar de Panelinha 3x1 Fofa, a festa foi completa para a equipe vencedora!</p>
+                        <p><strong>📸 - Ribas Interativo</strong></p>
+
+                        <button class="btn"><a href="eventos.html">Ver mais fotos</a></button>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ribas Interativo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarMais() {
+            var resumo = document.getElementById('resumoNoticia');
+            var textoCompleto = document.getElementById('textoCompleto');
+            var btn = resumo.nextElementSibling; // O botão "Ver mais"
+            
+            // Exibir o texto completo e esconder o resumo
+            resumo.style.display = "none";
+            textoCompleto.style.display = "block";
+            btn.textContent = "Fechar"; // Alterar para "Fechar"
+            btn.setAttribute("onclick", "fecharTexto()");
+        }
+
+        function fecharTexto() {
+            var resumo = document.getElementById('resumoNoticia');
+            var textoCompleto = document.getElementById('textoCompleto');
+            var btn = textoCompleto.previousElementSibling; // O botão "Fechar"
+            
+            // Voltar para o estado inicial com o resumo visível
+            resumo.style.display = "block";
+            textoCompleto.style.display = "none";
+            btn.textContent = "Ver mais"; // Alterar para "Ver mais"
+            btn.setAttribute("onclick", "mostrarMais()");
+        }
+
+        function toggleFotos(fotosId) {
+            var fotosDiv = document.getElementById(fotosId);
+            var btn = fotosDiv.previousElementSibling;
+
+            if (fotosDiv.style.display === "none") {
+                fotosDiv.style.display = "block";
+                btn.textContent = "Fechar fotos"; // Troca para "Fechar fotos"
+            } else {
+                fotosDiv.style.display = "none";
+                btn.textContent = "Ver mais fotos"; // Troca para "Ver mais fotos"
+            }
+        }
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

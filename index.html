@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribas Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Ribas Interativo</h1>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/" class="active">Página Inicial</a></li>
+                    <li><a href="futebol.html">Futebol</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="patrocinio.html">Colaboradores</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    </nav>
+
+    <main>
+        <!-- Futebol Section -->
+        <section id="futebol" class="section">
+            <div class="container">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h2>Futebol</h2>
+                <p>Descubra os campeonatos e torneios de futebol organizados pela Ribas Interativo. 
+                   Participe de competições emocionantes!</p>
+                <a href="futebol.html" class="btn">Saiba mais sobre Futebol</a>
+            </div>
+        </section>
+
+        <!-- Eventos Section -->
+        <section id="eventos" class="section dark">
+            <div class="container">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                </div>
+                <h2>Álbum de Fotos - Eventos</h2>
+                <p>Confira nossos eventos passados e veja os melhores momentos registrados em fotos.</p>
+                
+                <div class="eventos-grid">
+                    <div class="evento-card">
+                        <img src="cam_NT/NT1.jpg" 
+                             alt="5° Campeonato Fut7 de Antas">
+                        <div class="evento-content">
+                            <h3>Confira as melhores fotos da grande final entre os times da cidade de Novo Triunfo-BA e sua impactante vitória.</h3>
+                            <a href="eventos.html" class="btn">Veja mais</a>
+                        </div>
+                    </div>
+                    <div class="evento-card">
+                        <img src="https://images.unsplash.com/photo-1515937550543-29676e2e9e37?auto=format&fit=crop&q=80&w=800" 
+                             alt="Campeonato Infantil 2024">
+                        <div class="evento-content">
+                            <h3>Campeonato Infantil 2024</h3>
+                            <a href="/eventos" class="btn">Veja mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patrocínios Section -->
+        <section id="patrocinio" class="section">
+            <div class="container">
+                <div class="icon-container">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h2>Colaboradores</h2>
+                <p>Apoie nossos eventos e torne-se um colaborador! Veja nossos parceiros e como sua marca pode estar conosco.</p>
+                
+                <div class="patrocinios-grid">
+                    <div class="patrocinio-card"><img src="imagem/LOGO_SECOF.jpg" alt="" width="100%"></div>
+                    <div class="patrocinio-card"><img src="imagem/LOGO_MOVIMENTO_ESPORTES.jpg" alt=""width="100%"></div>
+                    <div class="patrocinio-card"><img src="imagem/LOGO_DIEGO_RIOS.jpg" alt=""width="100%"></div>
+                    <div class="patrocinio-card"><img src="imagem/LOGO_VITA_FARMA.jpg" alt=""width="100%"></div>
+                    <div class="patrocinio-card"><img src="imagem/LOGO_CODING.jpg" alt=""width="100%"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ribas Interativo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Link para o script JS -->
+    <script src="main.js"></script>
+</body>
+</html>

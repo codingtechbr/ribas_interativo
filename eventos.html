@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Ribas Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Ribas Interativo</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Página Inicial</a></li>
+                <li><a href="/futebol">Futebol</a></li>
+                <li><a href="/eventos" class="active">Eventos</a></li>
+                <li><a href="/patrocinios">Colaboradores</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="eventos" class="section dark">
+            <div class="container">
+                <h2>Eventos Passados</h2>
+                
+                <!-- Evento de Novo Triunfo -->
+                <div class="evento-card">
+                    <h3>Final do Campeonato de Futebol - Novo Triunfo-BA</h3>
+                    <img src="cam_NT/NT1.jpg" alt="Final do Campeonato de Futebol - Novo Triunfo" class="evento-capa">
+                    <p>Confira as melhores fotos da grande final entre os times da cidade de Novo Triunfo-BA e sua impactante vitória.</p>
+                    <button class="btn" onclick="toggleFotos('fotos1')">Mostrar Fotos</button>
+                    <div class="eventos-gallery" id="fotos1" style="display: none;">
+                        <img src="cam_NT/NT1.jpg" alt="Foto do evento final">
+                        <img src="cam_NT/NT2.jpg" alt="Foto do evento final">
+                        <img src="cam_NT/NT3.jpg" alt="Foto do evento final">
+                        <img src="cam_NT/NT4.jpg" alt="Foto do evento final">
+                        <img src="cam_NT/NT5.jpg" alt="Foto do evento final">
+                    </div>
+                </div>
+
+                <!-- Outro evento -->
+                <div class="evento-card">
+                    <h3>Campeonato Regional Sub-15</h3>
+                    <p>Veja os grandes momentos do Campeonato Regional Sub-15 que revelou novos talentos do futebol local.</p>
+                    <button class="btn" onclick="toggleFotos('fotos2')">Mostrar Fotos</button>
+                    <div class="eventos-gallery" id="fotos2" style="display: none;">
+                        <img src="https://images.unsplash.com/photo-1517669517049-5c0a31b257e1" alt="Fotos do evento Sub-15">
+                        <img src="https://images.unsplash.com/photo-1563217385-f034f1a22f5d" alt="Fotos do evento Sub-15">
+                    </div>
+                </div>
+
+                <div class="evento-card">
+                    <h3>Campeonato Feminino - Vitória</h3>
+                    <p>Confira os melhores momentos do Campeonato Feminino de Futebol em Vitória, com jogos emocionantes e grandes jogadas.</p>
+                    <button class="btn" onclick="toggleFotos('fotos3')">Mostrar Fotos</button>
+                    <div class="eventos-gallery" id="fotos3" style="display: none;">
+                        <img src="https://images.unsplash.com/photo-1568152957-3b6c6b3a29f0" alt="Fotos do Campeonato Feminino">
+                        <img src="https://images.unsplash.com/photo-1544724201-ecb3453b2220" alt="Fotos do Campeonato Feminino">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ribas Interativo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFotos(fotosId) {
+            var fotosDiv = document.getElementById(fotosId);
+            var btn = fotosDiv.previousElementSibling;
+
+            if (fotosDiv.style.display === "none") {
+                fotosDiv.style.display = "block";
+                btn.textContent = "Fechar Fotos"; // Troca para "Fechar Fotos"
+            } else {
+                fotosDiv.style.display = "none";
+                btn.textContent = "Mostrar Fotos"; // Troca para "Mostrar Fotos"
+            }
+        }
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

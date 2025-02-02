@@ -1,0 +1,294 @@
+:root {
+    --color-light: #F2F2F2;
+    --color-dark: #0D0D0D;
+    --color-primary: #A60303;
+    --color-secondary: #400101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--color-dark);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.section.dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.icon-container {
+    margin-bottom: 1.5rem;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Eventos Grid */
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.evento-card {
+    background-color: var(--color-light);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.evento-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.evento-content {
+    padding: 1.5rem;
+}
+
+.evento-content h3 {
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.evento-capa {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Patrocínios Grid */
+.patrocinios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.patrocinio-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.patrocinio-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 468px) {
+   /* Navigation */
+.navbar {
+    background-color: var(--color-dark);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column; /* Coloca o logo e o menu em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.logo {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espaço entre o logo e o menu */
+}
+
+.nav-links {
+    display: flex; /* Alinha os itens do menu horizontalmente */
+    list-style: none;
+    gap: 1rem; /* Espaço entre os itens */
+}
+
+.nav-links a {
+    color: var(--color-light);
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0;
+    transition: color 0.3s;
+    font-size: 12px; /* Tamanho da fonte ajustado para 12px */
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+}
+/* Adicionando uma seção para o grid de patrocinadores */
+.patrocinios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.patrocinio-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.patrocinio-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.patrocinio-card h3 {
+    font-size: 1.25rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.patrocinio-card p {
+    font-size: 0.875rem;
+    color: var(--color-dark);
+}
+
+.patrocinio-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .patrocinio-card {
+        padding: 1rem;
+    }
+}
