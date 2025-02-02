@@ -126,6 +126,7 @@ h2 {
 }
 
 .evento-card {
+    color: #0D0D0D;
     background-color: var(--color-light);
     border-radius: 0.5rem;
     overflow: hidden;
@@ -226,7 +227,9 @@ footer {
 .nav-links a:hover {
     color: var(--color-primary);
 }
-
+.btn{font-family: system-ui, -apple-system, sans-serif;
+    text-decoration: none;
+}
 .menu-toggle {
     display: none;
     background: none;
